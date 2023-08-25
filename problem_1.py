@@ -1,4 +1,4 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # YOUR FULL NAME
 # UAG00098
@@ -37,8 +37,7 @@ def main():
      print("Valores aceitos.")
    else:
      print("Valores recusados.")
+     
 if __name__ == '__main__':
     main()
-    
-
     
