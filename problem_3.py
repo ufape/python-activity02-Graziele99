@@ -1,3 +1,4 @@
+ 
 # -*- coding: utf-8 -*-
 
 # YOUR FULL NAME
@@ -49,5 +50,7 @@ def main():
         print("Intervalo (75, 100]")
     else:
         print("Fora de intervalo.")
+      
 if __name__ == '__main__':
     main()
+  
