@@ -28,7 +28,6 @@ Você digitou 3 valores pares.
 
 
 def main():
-     def main():
     num_pares = 0
 
     for i in range(6):
