@@ -1,49 +1,56 @@
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 # YOUR FULL NAME
 # UAG00098
-# Problem Set 2 - Problem 2
+# Problem Set 2 - Problem 3
 # Description:
- 
+
+"""
 Inputs, Processes and Output (IPO)
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 Input(s):
-Leia três valores de ponto flutuante A, B e C.
-Digite o valor A: 
-Digite o valor B:
-Digite o valor C:
+Digite um número de ponto flutuante.
+Exemplo 1:
+Digite o valor: 25.01
+Exemplo 2:
+Digite o valor: 25.00
+Exemplo 3:
+Digite o valor: -25.02
 
 Processes:
-Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de Bhaskara. Se não for possível calcular as raízes, mostre a mensagem correspondente “Impossível calcular.”, caso haja uma divisão por 0 ou raiz de numero negativo.
+Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos seguintes intervalos ([0, 25], (25, 50], (50, 75], (75, 100]) este valor se encontra. Obviamente se o valor não estiver em nenhum destes intervalos, deverá ser impressa a mensagem "Fora de intervalo.".
+
+O símbolo (representa "maior que". Por exemplo:
+[0, 25]  indica valores entre 0 e 25.0000, inclusive eles.
+(25, 50] indica valores maiores que 25 Ex: 25.00001 até o valor 50.0000000
 
 Output(s):
-Se não houver possibilidade de calcular as raízes, apresente a mensagem "Impossível calcular.". Caso contrário, imprima o resultado das raízes com 3 dígitos após o ponto, com uma mensagem correspondente conforme exemplo abaixo.
+A saída deve ser uma mensagem conforme exemplo abaixo.
 Exemplo 1:
-R1 = -0.297
-R2 = -2.712
+Intervalo (25, 50]
+Exemplo 2:
+Intervalo [0, 25]
+Exemplo 3:
+Fora de intervalo.
 """
 
 
 def main():
-  
-    a = float(input("Digite o valor A: "))
-    b = float(input("Digite o valor B: "))
-    c = float(input("Digite o valor C: "))
+ 
+    valor = float(input("Digite o valor: "))
 
-    delta = b**2 - 4*a*c
-
-    if a == 0 or delta < 0:
-        print("Impossível calcular.")
+    if valor >= 0 and valor <= 25:
+        print("Intervalo [0, 25]")
+    elif valor > 25 and valor <= 50:
+        print("Intervalo (25, 50]")
+    elif valor > 50 and valor <= 75:
+        print("Intervalo (50, 75]")
+    elif valor > 75 and valor <= 100:
+        print("Intervalo (75, 100]")
     else:
-        r1 = (-b + delta**0.5) / (2*a)
-        r2 = (-b - delta**0.5) / (2*a)
-        print(f"R1 = {r1:.3f}")
-        print(f"R2 = {r2:.3f}")
-
-
+        print("Fora de intervalo.")
 if __name__ == '__main__':
     main()
-
 
 
  
